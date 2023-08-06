@@ -18,7 +18,5 @@ public class FootballGame {
         this.date = date;
         this.time = time;
     }
-
-    // Konstruktor, Getter und Setter (nicht gezeigt für die Einfachheit)
 }
 
