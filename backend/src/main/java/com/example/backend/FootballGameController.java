@@ -47,4 +47,5 @@ public class FootballGameController {
         footballGameService.deleteGame(id);
         return ResponseEntity.noContent().build();
     }
+
 }
