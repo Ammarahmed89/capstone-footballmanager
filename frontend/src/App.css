@@ -1,15 +1,15 @@
 html, body {
-  height: 100%;
+  height: 2000%;
   margin: 0;
   padding: 0;
 }
 
 .App {
-  background-image: url(https://cdn.pixabay.com/photo/2020/04/19/20/57/soccer-5065614_1280.jpg);
+  background-image: url(https://cdn.pixabay.com/photo/2015/09/09/17/18/stadium-931975_1280.jpg);
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 2rem;
+  padding: 12rem;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   box-shadow: 20px 20px 20px green;
@@ -20,22 +20,22 @@ html, body {
   align-items: center;
 }
 
-
+/* Style for the Selected Game section */
 .App .selected-game {
   margin-top: 2rem;
   padding: 2rem;
-  border: 2px solid #1e05a5;
+  border: 2px solid #1e05a5; /* Add border */
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Style for the items within Selected Game */
 .App .selected-game p {
-  font-size: 1.6rem;
+  font-size: 1.6rem; /* Larger font size */
   margin: 1rem 0;
 }
-
+/* Add styles for the "Added Game" section */
 .App .added-game {
   margin-top: 2rem;
   padding: 2rem;
@@ -52,12 +52,12 @@ html, body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Style for each item within the "Added Game" section */
 .App .added-game {
-  font-size: 1rem;
-  margin: 5px;
-  padding: 0.5rem;
-  border: 2px solid #1e05a5;
+  font-size: 1rem; /* Larger font size */
+  margin: 10px; /* Add vertical margin */
+  padding: 0.5rem; /* Add padding to create space within the border */
+  border: 2px solid #1e05a5; /* Add border */
   border-radius: 6px;
 }
 

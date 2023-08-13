@@ -45,11 +45,11 @@ function App() {
                 console.log('Game added:', addedGameResponse);
                 setAddedGame(addedGameResponse);
 
-                // Update the addedGames state with the new game
+
                 setAddedGames((prevAddedGames) => [...prevAddedGames, addedGameResponse]);
 
                 setNewGame({
-                    id: '', // Reset ID to be generated for the next new game
+                    id: '',
                     team1: '',
                     team2: '',
                     date: '',
@@ -153,6 +153,7 @@ function App() {
                         <p>Date: {game.date}</p>
                         <p>Time: {game.time}</p>
                     </div>
+
                 ))}
             </div>
         </div>
