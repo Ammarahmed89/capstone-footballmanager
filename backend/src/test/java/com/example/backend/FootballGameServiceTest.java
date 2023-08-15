@@ -11,6 +11,7 @@ package com.example.backend;
         import java.util.Optional;
 
         import static org.assertj.core.api.Assertions.assertThat;
+        import static org.junit.jupiter.api.Assertions.assertEquals;
         import static org.mockito.Mockito.*;
 
 public class FootballGameServiceTest {
@@ -58,19 +59,17 @@ public class FootballGameServiceTest {
     }
 
     @Test
-    void givenGameToAdd_whenAddGame_thenReturnSavedGame() {
-        // Arrange
-        FootballGame gameToAdd = new FootballGame(null, "Team X", "Team Y", "2023-08-01", "18:00");
-        FootballGame savedGame = new FootballGame("1", "Team X", "Team Y", "2023-08-01", "18:00");
+    public void testAddGame() {
+        FootballGamewithoutid mockGameWithoutId = new FootballGamewithoutid("Team A", "Team B", "2023-08-15", "15:00");
+        FootballGame mockAddedGame = new FootballGame("1", "Team A", "Team B", "2023-08-15", "15:00");
 
-        when(footballGameRepository.save(gameToAdd)).thenReturn(savedGame);
+        when(footballGameRepository.save(any(FootballGame.class))).thenReturn(mockAddedGame);
 
-        // Act
-        FootballGame addedGame = footballGameService.addGame(gameToAdd);
+        FootballGame result = footballGameService.addGame(mockGameWithoutId);
 
-        // Assert
-        assertThat(addedGame).isEqualTo(savedGame);
+        assertEquals(mockAddedGame, result);
     }
+
 
     @Test
     void givenExistingGameAndUpdatedGame_whenUpdateGame_thenGameIsUpdated() {

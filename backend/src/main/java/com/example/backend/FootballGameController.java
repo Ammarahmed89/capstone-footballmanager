@@ -31,8 +31,8 @@ public class FootballGameController {
     }
 
     @PostMapping
-    public ResponseEntity<FootballGame> addGame(@RequestBody FootballGame game) {
-        FootballGame addedGame = footballGameService.addGame(game);
+    public ResponseEntity<FootballGame> addGame(@RequestBody FootballGamewithoutid game2 ) {
+        FootballGame addedGame = footballGameService.addGame(game2);
         return new ResponseEntity<>(addedGame, HttpStatus.CREATED);
     }
 

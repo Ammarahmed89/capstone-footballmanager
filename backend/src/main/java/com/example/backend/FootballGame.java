@@ -2,10 +2,12 @@ package com.example.backend;
 
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 @Data
 
 public class FootballGame {
+    @Id
     private  String id;
     private String team1;
     private String team2;

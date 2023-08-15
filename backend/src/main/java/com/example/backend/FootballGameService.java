@@ -22,8 +22,9 @@ public class FootballGameService {
         return footballGameRepository.findById(id);
     }
 
-    public FootballGame addGame(FootballGame game) {
-        return footballGameRepository.save(game);
+    public FootballGame addGame(FootballGamewithoutid game2) {
+        FootballGame game3= new FootballGame(null, game2.getTeam1(), game2.getTeam2(), game2.getDate(), game2.getTime());
+        return footballGameRepository.save(game3);
     }
 
     public void updateGame(String id, FootballGame updatedGame) {
