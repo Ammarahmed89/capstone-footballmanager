@@ -1,5 +1,5 @@
-package com.example.backend;
 
+package com.example.backend;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
