@@ -127,7 +127,7 @@ function App() {
                 <>
                     <h2>Welcome, {username}!</h2>
                     <button onClick={handleLogout}>Logout</button>
-                    <h2>Get Game</h2>
+                    <h2></h2>
                     <div>
                         <input
                             type="text"
@@ -149,7 +149,7 @@ function App() {
                         </div>
                     )}
                     <div className="add-game">
-                        <h2>Add New Game:</h2>
+                        <h2></h2>
                         <input
                             type="text"
                             placeholder="Team 1"
@@ -181,7 +181,7 @@ function App() {
                         {addedGames.map((game) => (
                             <div key={game.id}>
                                 <p>
-                                    <strong>Team 1:</strong> {game.team1} VS {game.team2}
+                                    <strong></strong> {game.team1} VS {game.team2}
                                 </p>
                                 <p>
                                     <strong>Date:</strong> {game.date} | <strong>Time:</strong> {game.time}
