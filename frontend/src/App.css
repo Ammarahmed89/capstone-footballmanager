@@ -1,65 +1,114 @@
+
 html, body {
-  height: 2000%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
+
 .App {
-  background-image: url(https://cdn.pixabay.com/photo/2015/09/09/17/18/stadium-931975_1280.jpg);
+  background-image: url(https://images.pexels.com/photos/1615842/pexels-photo-1615842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 12rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  box-shadow: 20px 20px 20px green;
-  color: #1e05a5;
+  padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #1e05a5;
 }
 
-/* Style for the Selected Game section */
+
+.App h1 {
+  font-size: 2.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.56);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.44);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+
+.App .get-game {
+  margin-bottom: 2rem;
+  border: 2px solid #1e05a5;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.29);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+}
+
+
+.App .get-game input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid #1e05a5;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+
 .App .selected-game {
   margin-top: 2rem;
   padding: 2rem;
-  border: 2px solid #1e05a5; /* Add border */
+  border: 2px solid #1e05a5;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
 }
 
-/* Style for the items within Selected Game */
+
 .App .selected-game p {
-  font-size: 1.6rem; /* Larger font size */
+  font-size: 1.6rem;
   margin: 1rem 0;
 }
-/* Add styles for the "Added Game" section */
+
+
 .App .added-game {
   margin-top: 2rem;
   padding: 2rem;
-  border: 2px solid #1e05a5; /* Add border */
+  border: 2px solid #a5053d;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: rgba(5, 165, 56, 0.72);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-/* Add styles for the "Added Game" section */
-.App .added-game {
-  margin-top: 2rem;
-  padding: 2rem;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
 }
 
-/* Style for each item within the "Added Game" section */
-.App .added-game {
-  font-size: 1rem; /* Larger font size */
-  margin: 10px; /* Add vertical margin */
-  padding: 0.5rem; /* Add padding to create space within the border */
-  border: 2px solid #1e05a5; /* Add border */
+
+.App .added-game div {
+  font-size: 1rem;
+  margin: 10px;
+  padding: 0.5rem;
+  border: 2px solid rgb(165, 5, 61);
   border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
+.App button {
+  background-color: #6755c5;
+  color: rgba(255, 255, 255, 0.63);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
 
+
+.App input {
+  padding: 0.5rem;
+  border: 2px solid #1e05a5;
+  border-radius: 6px;
+  font-size: 1rem;
+}
