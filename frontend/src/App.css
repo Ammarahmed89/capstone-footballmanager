@@ -3,22 +3,30 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+
+
+
 }
 
-
 .App {
-  background-image: url(https://images.pexels.com/photos/1615842/pexels-photo-1615842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-  background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 5rem;
-  display: flex;
+  /**padding: 5rem;
+  **/display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #1e05a5;
 }
 
+.Headersection{
+  width: 100%;
+  background:linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(https://images.pexels.com/photos/6759128/pexels-photo-6759128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
+  min-height: 500px;
+  align-items: center;
+  padding: 10% 1% 1% 1%;
+}
 
 .App h1 {
   font-size: 2.5rem;
@@ -26,7 +34,7 @@ html, body {
   border-radius: 10px;
   padding: 0.5rem 1rem;
   background-color: rgba(255, 255, 255, 0.44);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(5, 2, 3, 1);
   margin-bottom: 2rem;
 }
 
@@ -37,9 +45,9 @@ html, body {
   border-radius: 10px;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.29);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 1);
   width: 80%;
-  max-width: 800px;
+  max-width: 200px;
 }
 
 
@@ -56,28 +64,34 @@ html, body {
 .App .selected-game {
   margin-top: 2rem;
   padding: 2rem;
-  border: 2px solid #1e05a5;
+  border: 10px solid #1e05a5;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   width: 80%;
   max-width: 800px;
 }
 
 
 .App .selected-game p {
-  font-size: 1.6rem;
-  margin: 1rem 0;
+  font-size: 500rem;
+  margin: 5rem 0;
 }
 
+.mainsection{
+  width: 100%;
+  text-align: -webkit-center;
+  background:linear-gradient(rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.40)), url(https://images.pexels.com/photos/1615842/pexels-photo-1615842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
 
+}
 .App .added-game {
   margin-top: 2rem;
   padding: 2rem;
-  border: 2px solid #a5053d;
-  border-radius: 10px;
-  background-color: rgba(5, 165, 56, 0.72);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 1px;
+  background-color: rgba(248, 244, 244, 0.91);
+  box-shadow: 0 10px 70px rgba(4, 2, 5, 0.57);
   width: 80%;
   max-width: 800px;
 }
@@ -87,8 +101,8 @@ html, body {
   font-size: 1rem;
   margin: 10px;
   padding: 0.5rem;
-  border: 2px solid rgb(165, 5, 61);
-  border-radius: 6px;
+  border: 2px solid rgb(7, 58, 115);
+  border-radius: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,17 +111,16 @@ html, body {
 
 .App button {
   background-color: #6755c5;
-  color: rgba(255, 255, 255, 0.63);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  padding: 0.9rem 0.9rem;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 1rem;
 }
 
 
 .App input {
-  padding: 0.5rem;
+  padding: 0.3rem;
   border: 2px solid #1e05a5;
   border-radius: 6px;
   font-size: 1rem;

@@ -119,87 +119,95 @@ function App() {
         setUsername('');
         setPassword('');
     };
-
     return (
         <div className="App">
-            <h1>Football Games</h1>
-            {isLoggedIn ? (
-                <>
-                    <h2>Welcome, {username}!</h2>
-                    <button onClick={handleLogout}>Logout</button>
-                    <h2></h2>
-                    <div>
-                        <input
-                            type="text"
-                            placeholder="Enter game ID"
-                            value={gameIdInput}
-                            onChange={(e) => setGameIdInput(e.target.value)}
-                        />
-                        <button onClick={handleGetGameById}>Get Game</button>
-                    </div>
-                    {selectedGame && (
-                        <div className="selected-game">
-                            <p>
-                                <strong>Team 1:</strong> {selectedGame.team1} VS {selectedGame.team2}
-                            </p>
-                            <p>
-                                <strong>Date:</strong> {selectedGame.date} | <strong>Time:</strong> {selectedGame.time}
-                            </p>
-                            <button onClick={() => handleDeleteGame(selectedGame.id)}>Delete Game</button>
-                        </div>
-                    )}
-                    <div className="add-game">
+            <div className="Headersection">
+                <h1>Football Games</h1>
+                {isLoggedIn ? (
+                    <>
+                        <h2>Welcome, {username}!</h2>
+                        <button onClick={handleLogout}>Logout</button>
                         <h2></h2>
-                        <input
-                            type="text"
-                            placeholder="Team 1"
-                            value={newGame.team1}
-                            onChange={(e) => setNewGame({ ...newGame, team1: e.target.value })}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Team 2"
-                            value={newGame.team2}
-                            onChange={(e) => setNewGame({ ...newGame, team2: e.target.value })}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Date"
-                            value={newGame.date}
-                            onChange={(e) => setNewGame({ ...newGame, date: e.target.value })}
-                        />
-                        <input
-                            type="text"
-                            placeholder="Time"
-                            value={newGame.time}
-                            onChange={(e) => setNewGame({ ...newGame, time: e.target.value })}
-                        />
-                        <button onClick={handleAddGame}>Add Game</button>
-                    </div>
-                    <div className="added-game">
-                        <h2>All Games:</h2>
-                        {addedGames.map((game) => (
-                            <div key={game.id}>
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Enter game ID"
+                                value={gameIdInput}
+                                onChange={(e) => setGameIdInput(e.target.value)}
+                            />
+                            <button onClick={handleGetGameById}>Get Game</button>
+                        </div>
+                        {selectedGame && (
+                            <div className="selected-game">
                                 <p>
-                                    <strong></strong> {game.team1} VS {game.team2}
+                                    <strong>Team 1:</strong> {selectedGame.team1} VS {selectedGame.team2}
                                 </p>
                                 <p>
-                                    <strong>Date:</strong> {game.date} | <strong>Time:</strong> {game.time}
+                                    <strong>Date:</strong> {selectedGame.date} | <strong>Time:</strong> {selectedGame.time}
                                 </p>
-                                <button onClick={() => handleEditGame(game.id)}>Edit Game</button>
-                                <button onClick={() => handleDeleteGame(game.id)}>Delete Game</button>
+                                <button onClick={() => handleDeleteGame(selectedGame.id)}>Delete Game</button>
                             </div>
-                        ))}
+                        )}
+                        <div className="add-game">
+                            <h2></h2>
+                            <input
+                                type="text"
+                                placeholder="Team 1"
+                                value={newGame.team1}
+                                onChange={(e) => setNewGame({ ...newGame, team1: e.target.value })}
+                            />
+                            <input
+                                type="text"
+                                placeholder="Team 2"
+                                value={newGame.team2}
+                                onChange={(e) => setNewGame({ ...newGame, team2: e.target.value })}
+                            />
+                            <input
+                                type="Date"
+                                placeholder="Date"
+                                value={newGame.date}
+                                onChange={(e) => setNewGame({ ...newGame, date: e.target.value })}
+                            />
+                            <input
+                                type="Time"
+                                placeholder="Time"
+                                value={newGame.time}
+                                onChange={(e) => setNewGame({ ...newGame, time: e.target.value })}
+                            />
+                            <button onClick={handleAddGame}>Add Game</button>
+                        </div>
+                    </>
+                ) : (
+                    <div className="login">
+                        <h2></h2>
+                        <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <button onClick={handleLogin}>Login</button>
                     </div>
-                </>
-            ) : (
-                <div className="login">
-                    <h2>Login</h2>
-                    <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                    <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <button onClick={handleLogin}>Login</button>
+                )}
+            </div>
+            <div className="mainsection">
+                <div className="added-game">
+                    <h2>All Games:</h2>
+                    {addedGames.map((game) => (
+                        <div key={game.id}>
+                            <p>
+                                <strong></strong> {game.team1} VS {game.team2}
+                            </p>
+                            <p>
+                                <strong>Date:</strong> {game.date} | <strong>Time:</strong> {game.time}
+                            </p>
+                            {isLoggedIn && (
+                                <div>
+                                    <button onClick={() => handleEditGame(game.id)}>Edit Game</button>
+                                    <button onClick={() => handleDeleteGame(game.id)}>Delete Game</button>
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
-            )}
+                {/* New div section in mainsection */}
+            </div>
         </div>
     );
 }
