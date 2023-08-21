@@ -79,7 +79,7 @@ html, body {
 }
 
 .mainsection{
-  width: 100%;
+  width: 102%;
   text-align: -webkit-center;
   background:linear-gradient(rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.40)), url(https://images.pexels.com/photos/1615842/pexels-photo-1615842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   background-size: cover;
@@ -88,7 +88,7 @@ html, body {
 .App .added-game {
   margin-top: 2rem;
   padding: 2rem;
-  border: 2px solid rgba(0, 0, 0, 0);
+
   border-radius: 1px;
   background-color: rgba(248, 244, 244, 0.91);
   box-shadow: 0 10px 70px rgba(4, 2, 5, 0.57);
@@ -100,12 +100,14 @@ html, body {
 .App .added-game div {
   font-size: 1rem;
   margin: 10px;
-  padding: 0.5rem;
-  border: 2px solid rgb(7, 58, 115);
-  border-radius: 1px;
-  display: flex;
+  padding: 0.7rem;
+  display: flow;
   justify-content: space-between;
   align-items: center;
+  color: rgb(7, 5, 5);
+  font-family:SansSerif;
+  font-size-adjust: inherit;
+  font-size: larger;
 }
 
 
@@ -113,9 +115,9 @@ html, body {
   background-color: #6755c5;
   color: rgb(255, 255, 255);
   padding: 0.9rem 0.9rem;
-  border-radius: 50px;
+  border-radius: 200cm;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.84rem;
 }
 
 
